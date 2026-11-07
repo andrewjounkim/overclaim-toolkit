@@ -1,6 +1,6 @@
 # Overclaim Toolkit
 
-Two tools were used as coding agents: Claude Code, Codex for this CMU 15-113 HW8.
+The main coding agent used was Claude Code on VS Code for this CMU 15-113 HW8.
 
 | Piece | Kind | What it does |
 |---|---|---|
