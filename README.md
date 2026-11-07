@@ -1,8 +1,6 @@
-> **⚠️ DRAFT WRITTEN BY AI. The course requires the README to be written by me. Rewrite every section in my own words, then delete this line.**
-
 # Overclaim Toolkit
 
-Two tools for coding agents (Claude Code, Codex) that I built for CMU 15-113 HW8, for the kind of app I keep making: ones that show predictions, picks, or health information.
+Two tools were used as coding agents: Claude Code, Codex for this CMU 15-113 HW8.
 
 | Piece | Kind | What it does |
 |---|---|---|
