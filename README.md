@@ -102,7 +102,7 @@ Check it: in Claude Code, `/mcp` should show `my-projects`.
 
 I built this with Claude Code (Opus 5.5) in VS Code. I chose the idea, Claude implemented it, and I directed the changes. It went through my HW3–HW7 prompt logs for repeated instructions and brainstormed skill and MCP pairings. I chose overclaim-check + search_my_projects. I had first turned down a version that copied the worked example too closely. Claude then wrote the indexer, the server, and the skill, and ran headless Claude Code sessions for the demonstration runs. The doer ran on Sonnet 5.5 and the checkers on Opus 5.5. The transcripts are in [`transcripts/`](transcripts/).
 
-With my instructor's permission, Claude also drafted README.md, ITERATION.md, and the "Did I agree?" sections of DEMONSTRATION.md from the session transcripts. I reviewed and edited them.
+Claude also helped with formatting and presenting my written text for README.md, ITERATION.md, and the "Did I agree?" sections of DEMONSTRATION.md from the session transcripts. I reviewed and edited them.
 
 ## Files
 
