@@ -73,7 +73,15 @@ Precedent: strikeout-lab/views/today.py:55 (strong): the Today page warns "This 
 Summary: 1 HIGH, 2 MEDIUM, 2 LOW
 ```
 
-**Did I agree?** <!-- TODO (me): confirm or push back in my own words. --> I checked the HIGH and the first MEDIUM against the branch code, and both hold up. `home.py` does fall back to `hitters = {}` without the warning that `today.py:61` shows. The year check at `today.py:55` really is missing from the card. The LOW about "top pick" is a judgment call. The checker said itself that the same-page disclaimer covers it, and I would still reword it as "Most expected strikeouts today."
+**Did I agree?** <!-- AI-drafted placeholder: rewrite in my own words. -->
+Mostly yes. I went into the branch code to check the two biggest findings myself, and both are real:
+
+- **The HIGH is right, and it's the bug I care about most.** If batter stats fail to load, `home.py` quietly switches to team stats and the card still says "lineup not posted yet", even when a lineup is posted. My Today page already warns about this (`today.py:61`), so the new card goes against my own app. A normal code review would have missed it, because nothing crashes and every test passes.
+- **The season mismatch MEDIUM is right too.** If someone picks 2019 in the sidebar, the card ranks today's pitchers with 2019 stats and still calls one "Pitcher of the day". The Today page has a warning for exactly this (`today.py:55`), and the checker found that warning as the precedent.
+- **The missing caveats MEDIUM is fair.** Today's table shows notes like "workload based on only 1 start", but the card is the most visible spot in the app and drops them.
+- **The LOW about "Model's top pick" is a judgment call.** The checker admitted the disclaimer right below covers it. I'd still change it to something like "Most expected strikeouts today", because I already turned down a "best bets" framing for this app in HW3.
+
+What I'd push back on: the severities. On the same diff, the previous version of the skill called the "lineup not posted" label MEDIUM, and this one called it HIGH, so I can't fully trust the HIGH/MEDIUM/LOW labels yet (see ITERATION.md).
 
 ---
 
@@ -118,7 +126,10 @@ Summary: 0 HIGH, 1 MEDIUM, 0 LOW
 
 It also confirmed what the doer got right: the "2+ standard errors" check really is in the code (`model.py:271`), and the forecast never uses the badge. It also refused to vouch for "167 tests pass" because it couldn't run them itself.
 
-**Did I agree?** <!-- TODO (me): my own words. --> Yes. A missing log gives `streak = None`, so the cell is `""`, the same as "not hot". Run 2's doer was more careful than run 1's, and the checker's report is proportionally shorter. That's what I want from a checker: it didn't invent problems to fill the format.
+**Did I agree?** <!-- AI-drafted placeholder: rewrite in my own words. -->
+Yes. I checked `browse.py`: when a pitcher has no game log, the badge code gets nothing back and the cell is left blank, which looks exactly like "checked, not hot". Offline, most pitchers have no saved game log, so most blanks don't actually mean "not hot". The table-wide caption mentions it, but nobody reads a caption to work out what one empty cell means. The checker's suggestion to show "— (no recent starts)" in the cell is how I've handled missing data elsewhere in this app, so the precedent it found was real.
+
+I also liked what it *didn't* do. Run 2's doer was more careful (it labeled the cutoffs as "not validated" and kept the badge out of the forecast), and the checker gave one MEDIUM instead of inventing problems to fill the format. It also wouldn't sign off on "167 tests pass" because it couldn't run them itself, which is the right behavior for a checker. I ran them, and they do pass.
 
 ---
 
