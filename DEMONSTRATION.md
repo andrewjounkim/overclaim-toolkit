@@ -138,4 +138,3 @@ I also liked what it *didn't* do. Run 2's doer was more careful (it labeled the 
 - **Triggering:** in all three v2/v3 checker sessions, the skill loaded on the second tool call. Two different phrasings were used, and neither named the skill.
 - **Format:** every report used the same block format and `Summary:` line, so I can compare them side by side.
 - **Same diff, two versions:** checker v2 and v3 on the run 1 diff both found the "lineup not posted" label and the missing caveats. The severity drifted, though: the label was MEDIUM in v2 and HIGH in v3. See ITERATION.md.
-- **Codex:** <!-- TODO: add the Codex (GPT) checker run once the usage limit resets, or remove this line. -->

@@ -61,11 +61,9 @@ python3 -m venv .venv
 | Tool | Where the skill goes |
 |---|---|
 | Claude Code | `~/.claude/skills/overclaim-check/` (all projects) or `<repo>/.claude/skills/overclaim-check/` |
-| Codex | `~/.agents/skills/overclaim-check/` (all projects) or `<repo>/.agents/skills/overclaim-check/` |
 
 ```bash
 ln -s ~/overclaim-toolkit/skills/overclaim-check ~/.claude/skills/overclaim-check
-ln -s ~/overclaim-toolkit/skills/overclaim-check ~/.agents/skills/overclaim-check
 ```
 
 **3. Register the MCP server.** Replace `/Users/andrewjounkim` with your own home folder (⚠️ **machine-specific**). Both paths must be absolute, and `command` must point to the venv's Python, not the system `python3`.
@@ -83,24 +81,16 @@ Claude Code: put this in a `.mcp.json` file (this repo has one), then pass it wi
 }
 ```
 
-Codex: add this to `~/.codex/config.toml`:
-
-```toml
-[mcp_servers.my_projects]
-command = "/Users/andrewjounkim/overclaim-toolkit/.venv/bin/python"
-args = ["/Users/andrewjounkim/overclaim-toolkit/mcp_server/server.py"]
-```
-
-Check it: `codex mcp list` should show `my_projects  enabled`. In Claude Code, `/mcp` should show `my-projects`.
+Check it: in Claude Code, `/mcp` should show `my-projects`.
 
 **Heads-up: the class's example code no longer runs.** `from mcp.server.fastmcp import FastMCP` fails on `mcp` 2.x. The class was renamed `MCPServer` and lives in `mcp.server.mcpserver`. This repo uses the 2.x name.
 
 ## Where I confirmed it works
 
-| | Claude Code 2.1.319 | Codex CLI 0.163 |
-|---|---|---|
-| Skill loads and triggers | ✅ (Sonnet 5.5 and Opus 5.5 sessions, see DEMONSTRATION.md) | ⚠️ <!-- TODO: fill in after the Codex run --> |
-| MCP tool is called | ✅ | ✅ registered (`codex mcp list`); ⚠️ call not yet confirmed, usage limit hit |
+| | Claude Code 2.1.319 |
+|---|---|
+| Skill loads and triggers | ✅ (Sonnet 5.5 and Opus 5.5 sessions, see DEMONSTRATION.md) |
+| MCP tool is called | ✅ |
 
 ## Borrowed or adapted
 
