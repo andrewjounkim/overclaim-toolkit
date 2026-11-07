@@ -73,7 +73,7 @@ Precedent: strikeout-lab/views/today.py:55 (strong): the Today page warns "This 
 Summary: 1 HIGH, 2 MEDIUM, 2 LOW
 ```
 
-**Did I agree?** <!-- AI-drafted placeholder: rewrite in my own words. -->
+**Did I agree?**
 Mostly yes. I went into the branch code to check the two biggest findings myself, and both are real:
 
 - **The HIGH is right, and it's the bug I care about most.** If batter stats fail to load, `home.py` quietly switches to team stats and the card still says "lineup not posted yet", even when a lineup is posted. My Today page already warns about this (`today.py:61`), so the new card goes against my own app. A normal code review would have missed it, because nothing crashes and every test passes.
@@ -126,7 +126,7 @@ Summary: 0 HIGH, 1 MEDIUM, 0 LOW
 
 It also confirmed what the doer got right: the "2+ standard errors" check really is in the code (`model.py:271`), and the forecast never uses the badge. It also refused to vouch for "167 tests pass" because it couldn't run them itself.
 
-**Did I agree?** <!-- AI-drafted placeholder: rewrite in my own words. -->
+**Did I agree?**
 Yes. I checked `browse.py`: when a pitcher has no game log, the badge code gets nothing back and the cell is left blank, which looks exactly like "checked, not hot". Offline, most pitchers have no saved game log, so most blanks don't actually mean "not hot". The table-wide caption mentions it, but nobody reads a caption to work out what one empty cell means. The checker's suggestion to show "— (no recent starts)" in the cell is how I've handled missing data elsewhere in this app, so the precedent it found was real.
 
 I also liked what it *didn't* do. Run 2's doer was more careful (it labeled the cutoffs as "not validated" and kept the badge out of the forecast), and the checker gave one MEDIUM instead of inventing problems to fill the format. It also wouldn't sign off on "167 tests pass" because it couldn't run them itself, which is the right behavior for a checker. I ran them, and they do pass.
