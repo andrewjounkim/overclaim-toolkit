@@ -1,5 +1,3 @@
-> **⚠️ DRAFT WRITTEN BY AI. The course requires ITERATION.md to be written by me. Use these facts, rewrite it in my own words, add what I think, then delete this line.**
-
 # Iteration: how the skill failed and what I changed
 
 The earlier versions are saved in [`iteration/SKILL.v1.md`](iteration/SKILL.v1.md) and [`iteration/SKILL.v2.md`](iteration/SKILL.v2.md). The current one is [`skills/overclaim-check/SKILL.md`](skills/overclaim-check/SKILL.md) (v3). For each change I reran the **same prompt on the same diff with the same permissions**, so the skill was the only thing that changed.
