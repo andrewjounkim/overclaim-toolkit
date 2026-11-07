@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+# Rebuild with: python mcp_server/build_index.py (it holds text from my private machine)
+mcp_server/index/
+# Raw session logs are large and include machine metadata; the rendered .md copies are committed
+transcripts/**/*.jsonl
+.DS_Store

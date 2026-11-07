@@ -1,0 +1,1 @@
+add a hot streak badge to the browse page for pitchers whose strikeout rate over their last 3 starts is way above their season rate. keep it consistent with how i've handled this kind of thing in my past projects. run the tests with ./.venv/bin/python -m pytest when done. dont commit.

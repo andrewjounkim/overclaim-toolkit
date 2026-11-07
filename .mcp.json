@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "my-projects": {
+      "command": "/Users/andrewjounkim/overclaim-toolkit/.venv/bin/python",
+      "args": ["/Users/andrewjounkim/overclaim-toolkit/mcp_server/server.py"]
+    }
+  }
+}

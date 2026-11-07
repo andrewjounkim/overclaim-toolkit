@@ -1,0 +1,1 @@
+add a pitcher of the day card to the homepage that picks the best strikeout pitcher pitching today and shows why. keep it consistent with how i've handled this kind of thing in my past projects. run the tests when done. dont commit.

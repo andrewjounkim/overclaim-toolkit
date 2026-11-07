@@ -1,0 +1,16 @@
+Reading additional input from stdin...
+OpenAI Codex v0.163.0-alpha.11
+--------
+workdir: /Users/andrewjounkim/doc-truth-toolkit
+model: gpt-6-astra
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a1b825-cd20-7f32-acf3-ce2ecb64ed0a
+--------
+user
+smoke test
+ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/settings/usage to purchase more credits or try again at 10:14 PM.
+ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/settings/usage to purchase more credits or try again at 10:14 PM.

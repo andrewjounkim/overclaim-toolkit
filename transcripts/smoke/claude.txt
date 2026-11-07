@@ -1,0 +1,3 @@
+BANANA
+
+I loaded this skill from `/Users/andrewjounkim/doc-truth-toolkit/.claude/skills/banana-smoke`. That's the base directory the skill launch reported. The skill's instruction file is inside that folder, but I didn't open it myself.

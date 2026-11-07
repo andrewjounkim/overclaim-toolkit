@@ -1,0 +1,9 @@
+# Projects to index, one absolute path per line (machine-specific: edit for your computer)
+/Users/andrewjounkim/strikeout-lab
+/Users/andrewjounkim/DiagKnows
+/Users/andrewjounkim/papertrail-backend
+/Users/andrewjounkim/papertrail-frontend
+/Users/andrewjounkim/eyestrain-monitor
+/Users/andrewjounkim/pressure-free-throw
+/Users/andrewjounkim/orchestra-panic-phase2
+/Users/andrewjounkim/portfolio-concept
